@@ -1,0 +1,40 @@
+/**
+ * 
+ */
+package com.bcj.corejava.maps;
+
+import java.util.HashMap;
+
+/**
+ * @author Boot Camp User 008
+ *
+ */
+public class Rarest {
+
+	public static void main(String[] args) {
+
+		HashMap<String, Integer> rearHash = new HashMap<String, Integer>();
+		rearHash.put("Alyssa", 22);
+		rearHash.put("Char", 25);
+		rearHash.put("Dan", 25);
+		rearHash.put("Jeff", 20);
+		rearHash.put("Kasey", 20);
+		rearHash.put("Kim", 20);
+		rearHash.put("Mogran", 25);
+		rearHash.put("Ryan", 25);
+		rearHash.put("Stef", 22);
+		getRarestAge(rearHash);
+
+	}
+
+	/**
+	 * @param rearHash
+	 */
+	private static void getRarestAge(HashMap<String, Integer> rearHash) {
+
+         
+         	
+	}
+
+
+}

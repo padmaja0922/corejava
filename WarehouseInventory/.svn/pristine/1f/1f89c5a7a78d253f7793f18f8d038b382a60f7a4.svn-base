@@ -1,0 +1,85 @@
+/**
+ * 
+ */
+package com.bcj.manageInventory;
+
+import java.util.Date;
+
+/**
+ * @author Boot Camp User 008
+ *
+ */
+public class Inventory {
+	
+   private String upcCode;
+   private Date expDate;
+   private int quantity;
+   
+   public String toString(){
+	   return  (this.upcCode +"  " + this.expDate +"  "+ this.quantity );
+   }
+
+/**
+ * @return the upcCode
+ */
+public String getUpcCode() {
+	return upcCode;
+}
+
+/**
+ * @param upcCode the upcCode to set
+ */
+public void setUpcCode(String upcCode) {
+	this.upcCode = upcCode;
+}
+
+/**
+ * @return the expDate
+ */
+public Date getexpDate() {
+	return expDate;
+}
+
+/**
+ * @param localLocalDate the expDate to set
+ */
+public void setExpDate(Date date) {
+	this.expDate = date;
+}
+
+/**
+ * @return the quantity
+ */
+public int getQuantity() {
+	return quantity;
+}
+
+/**
+ * @param quantity the quantity to set
+ */
+public void setQuantity(int quantity) {
+	this.quantity = quantity;
+}
+
+/**
+ * @param upcCode
+ * @param expDate
+ * @param quantity
+ */
+public Inventory(String upcCode, Date expDate, int quantity) {
+
+	this.upcCode = upcCode;
+	this.expDate = expDate;
+	this.quantity = quantity;
+}
+
+/**
+ * 
+ */
+public Inventory() {
+	super();
+}
+	
+   
+
+}

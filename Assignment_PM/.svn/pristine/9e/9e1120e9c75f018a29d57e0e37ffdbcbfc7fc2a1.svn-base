@@ -1,0 +1,55 @@
+/**
+ * 
+ */
+package com.bcj.test;
+
+import java.util.Scanner;
+
+/**
+ * @author Boot Camp User 008
+ *
+ */
+public class StringPattern {
+	
+	static Scanner scan = new Scanner(System.in);
+	
+	public String[] printStringPattern(){
+		
+		System.out.println("Enter the String :");
+		String pattern = scan.nextLine();
+		String[] s= pattern.split(",");
+		//String[] s2 = str.split(":");
+		 String[] s2=s;
+		for(int i =0 ; i<s2.length;i++){
+			if(i%2==0)
+				System.out.print(s2[i]+ " --> ");
+			else
+				System.out.println(s2[i]);
+		}
+		return s2;
+	}
+	
+	public void printInteger(String[] s){
+		int x=0;
+		System.out.println("Enter the string to print integer");
+		String str = scan.nextLine();
+		for(int i=0;i<s.length;i=i+2)
+		{
+			if(str.equals(s[0])){
+				System.out.println(s[i+1]);
+				x=1;
+				break;
+			}
+		}
+		if(x==0)
+			System.out.println("String not found");
+	}
+	
+	public void main(String[] args ){
+		
+		StringPattern strp= new StringPattern();
+		String[] s = strp.printStringPattern();
+		strp.printInteger(s);
+		scan.close();
+	}
+}

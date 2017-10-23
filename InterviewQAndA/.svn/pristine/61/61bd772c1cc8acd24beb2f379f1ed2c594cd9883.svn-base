@@ -1,0 +1,267 @@
+    1.  What is java?
+        Java is a  secured, robust, multithreaded  , object oriented programming language used to develop
+        java program.
+    
+    2.  What are the components used to develop java application?
+        There are 5 components used to develop java application
+           1. JDK
+           2. IDE
+           3. DB
+           4. SVN
+           5. APP/WEB SERVER
+           
+           JDK: used to develop java program
+           IDE: sw application used to develop and debug java program - Eclipse , NetBeans, IntelJ
+           DB: used to store data - MySql,Oracle
+           SVN: environment used to store history of application - Svn, Git, Cvs
+           SERVER: used to deploy the java web application.
+           
+     3.  What are the types applications can be created using java programming ?
+         There are mainly 4 type of applications that can be created using java programming:
+            1) Stand alone Application : It is also known as desktop application or window-based application. 
+               An application that we need to install on every machine such as media player, antivirus etc.
+               AWT and Swing are used in java for creating stand alone applications.
+            2) Web Application : An application that runs on the server side and creates dynamic page,
+               is called web application. Currently, servlet, jsp, struts, jsf etc. technologies are used for 
+               creating web applications in java.
+            3) Enterprise Application : An application that is distributed in nature, such as banking applications etc.
+               It has the advantage of high level security, load balancing and clustering. In java, EJB is used for creating
+               enterprise applications.
+            4) Mobile Application : An application that is created for mobile devices. Currently Android and Java ME 
+               are used for creating mobile applications.   
+               
+     4.   JVM memory model?
+          JVM is an abstract machine. It's a specification which provides runtime environment in which java byte
+          code is executed.
+          Memory area alloted by JVM are:
+            1. Class Area
+            2. Heap Area
+            3. Stack Area
+            4. PC register
+            5. Native Method Stack
+            
+            Class Area : is used to hold static data members.
+            Heap Area: all the objects created during the program execution gets memory in heap.
+                       The context of String are stored in special memory location called String Constant pool.
+            Stack Area : stores frames, primitive local variables, partial results and plays part in method invocation
+                         and returns.
+            PC register: It contains the address of the Java virtual machine instruction currently being executed.
+            Native Method Stack : It contains all the native methods used in the application.             
+                                    
+            
+     5. Naming Conventions of java?
+         class name:	should start with upper case letter and be a noun e.g. String, Color, Button, Thread etc.
+         interface name	should start with upper case letter and be an adjective e.g. Runnable, Remote, ActionListener etc.
+         method name	should start with lower case letter and be a verb e.g. actionPerformed(), main(), print(), println() etc.
+         variable name	should start with lower case letter e.g. firstName, orderNumber etc.
+         package name	should be in lower case letter e.g. java, lang, sql, util etc.
+         constants name	should be in upper case letter. e.g. RED, YELLOW, MAX_PRIORITY etc.
+         
+         
+      6. Difference Between Heap and Stack?
+      
+         1.  When an object is created it always stored      1. Stack contains references to that object and local
+               in heap                                             primitives data members
+         2.  Heap memory is used by all parts of the         2. Stack is used by only one thread of execution.   
+              application. 
+      
+         3.  Memory management in heap is done by            3. Memory management in stack is done in LIFO. 
+              Garbage Collector.
+         4.  Heap lives from start till the end of the       4. Stack is short lived. 
+              application.
+         5.  If heap is full java runtime throws             5. If stack is full java runtime throws
+                java.lang.OutOfMemeory error.                      java.lang.StackOverFlow error.
+         6.  We can use -Xms and -Xmx jvm option to          6. -Xss is used for stack.
+                define the start and max size of heap 
+     
+     7. What is Class in java ?
+          
+           Class is template or blue print that represents state and behavior. In java state is represented as data 
+           members and behavior is represented as methods.
+           
+     8. What is path and classpath?      
+     
+                        
+            Path: Path is an environment variable which is used by the operating system to find the executables.
+                  Path is nothing but setting up an environment for operating system. Operating System will look
+                   in this PATH for executables.   Executables: javac.exe, java.exe, javadoc.exe, 
+                   
+            ClassPath: The CLASSPATH variable is one way to tell applications, including the JDK tools, 
+                      where to look for user classes.Classpath is an environment variable which is used by the Java 
+                      compiler to find the path, of classes.ie in J2EE we give the path of jar files. 
+                      Classpath is nothing but setting up the environment for Java. Java will use to find compiled classes 
+                      
+     9.  Explain the  design in Java program?
+            In java we design program using
+              PackageName :(domain Name.companyName.projectName.functionality).
+              Import: to import java util and lang class and other classes used in the applications.
+              Class Declaration: (Access Modifier  class  ClassName).
+              Properties : (Access Modifier   dataTypes   variableName).
+              Method Declaration : (Access Modifier  returnType methodName()).
+              Comments 
+              
+    10.  What are different OOPS concepts?
+o            Abstraction - is a concept to hide implementation details by showing only essential features.
+o            Polymorphism -  Polymorphism is the concept of an object’s ability to take on many forms.
+o            Encapsulation - is a concept where restricting access of data members to class by making them private and providing 
+                                 access outside class through getters and setters.
+o            Inheritance -  is a concept where a sub class acquires properties and behaviour of  super class , then 
+                                the classes are in IS-A relationship.
+                                
+                                
+    11.  What is static in java ?
+              Static is a keyword in java which can be applied towards 
+                  variables , methods and blocks.
+              when applied towards variables , they become class level variables. They gets memory in class area.
+              when applied towards methods they can be accessed without creating object of that class.
+              when applied towards blocks they are executed before constructors.
+             
+    12.  What is final in java?
+               Final is a keyword in java which can be applied towards
+                     variables, methods and classes
+               when applied towards variables the values of it can't be changed.
+               when applied towards methods they can't be overridden.
+               when applied towards classes they can't be inherited.
+               
+    13.  What is Abstraction?
+              Abstraction is one of the OOPs concept , it is the process of hiding implementation details and showing 
+              only functionality. Abstraction deals with what object does rather than how it does. 
+              At the time of designing the class Abstraction comes into comes into picture for further flexibility 
+              if the developer is not sure of the implementation details of the method.
+              In java method is declared with abstract keyword when there is no implementation of that method then
+              class with abstract method becomes abstract. Extend keyword is used to extend the abstract class and the class
+              that implements the abstract class must implement the abstract methods.  It cannot be instantiated . 
+             
+    14.  What is Inheritance ?
+              Inheritance is one of the OOPs concept , where a sub class acquires the properties and behavior of super class
+              Inheritance represents the IS-A relationship, also known as parent-child relationship. In java Extends keyword 
+              is used to  create sub class from super class.
+              We use Inheritance in java for
+                   For Method Overriding (so runtime polymorphism can be achieved).
+                   For Code Reusability.
+                   
+    15.  What is Polymorphism?
+              Polymorphism is one of the OOPs concept  by which we can perform a single action by different ways. 
+              There are two types of polymorphism in java: compile time polymorphism and runtime polymorphism. 
+              We can perform polymorphism in java by method overloading (compile time polymorphism)
+               and method overriding (runtime polymorphism). 
+               
+    16.  What is Encapsulation ?
+                Encapsulation is one of the OOPs concept where we can restrict the access of data members by making them
+                private and providing access outside the class by setters and getters.
+                By providing only setter or getter method, you can make the class read-only or write-only.
+                
+    17.  What is method overloading and overriding?
+                Overloading: If a class has multiple methods having same name but different in number of parameters or
+                datatypes of parameters  it is known as  Method Overloading. If we have to perform only one operation,
+                having same name of the methods increases the  readability of the program. 
+                
+                Overriding: In an Inheritance relationship if a subclass has the same method implementation which is 
+                already declared in super class  it is known as method overriding in java. Methods signature must be same in 
+                two classes. Method overriding is used achieve runtime polymorphism. 
+               
+     18.  What are different types of variables in Java?
+            They are mainly 3 types of variables are declared in java
+                1. Instance Variable : Variables declared in class but outside the method. By creating object of class we
+                                       can access these variables.
+                2. Static Variables : Instance variables declared with static keyword are called static variables. These
+                                      variables are class level variables. They get memory in class area of jvm.
+                3. Local Variables : Variables which are declared inside the method are known as local variables.
+                                      The scope of these variables is within the method.
+                                      
+     20.   What is static and dynamic binding ?
+               Connecting a method call to the method body is known as binding.
+               There are two types of binding
+                    1. static binding (also known as early binding).
+                    2. dynamic binding (also known as late binding).  
+               Static Binding: When type of the object is determined at compiled time(by the compiler), it is known as 
+               static binding. If there is any private, final or static method in a class, there is static binding.                                                                                                       
+               Dynamic Binding : When type of the object is determined at run-time, it is known as dynamic binding. 
+               
+     21.  What is an Interface ?.
+               An interface in java is a blueprint of a class. It has static constants and abstract method. It is used to
+               achieve abstraction and multiple inheritance in Java. Java Interface also represents IS-A relationship.
+               It cannot be instantiated just like abstract class.  Interface represents a contract where class that implements
+               the interface  has to  implement all the methods declared in the Interface. From java 1.8 we can have static
+               and default methods in Interface.              
+                                         
+                
+     22.   What are different types of access modifiers?
+	            Public: Accessible everywhere.
+	            Private: Accessible within the class.
+	            Protected: Accessible within the package and outside the package only through inheritance.
+	            Default: Accessible only within the package.
+              
+     23.   What is call by value?
+                Passing a variable by value is that the value held in the variable that is passed as an argument is copied 
+                into the parameters that are defined in the method header. That is why changes made to the variable within
+                the method had no effect on the variable that was passed. when objects are passed, the object itself is
+                passed. No copy is made. 
+
+     24.   What is string pool?
+	            String pool is a pool of strings stored in java heap memory.  String is possible only because of the 
+	            immutability concept of the string. String pools help in saving lot of space for java Runtime. When we use 
+	            double quotes to create a String, it first looks for String with same value in the String pool, if found it
+	            just returns the reference else it creates a new String in the pool and then returns the reference.
+	             
+	             
+    25.  Why string is immutable?
+	            Majority of the data is represented in the form of strings. As a result, there are high chances of strings
+	            pointing to the same reference. If a string changes, it will affect the other string which is being referenced 
+	            to the same pointer and there are chances that it might become unreferenced which gets deleted by the automatic
+	            garbage collector. This is the reason why strings are made immutable.
+   
+   26.  How do you make a class immutable?
+                By declaring a class final.
+                By declaring the properties of the class as final.
+                By not providing the setters.
+                
+                
+   27.  Difference between StringBuffer vs StringBuilder ?
+   
+            	StringBuffer	                                                     StringBuilder
+            StringBuffer is synchronized i.e. thread safe.                    StringBuilder is non-synchronized i.e. not thread safe. 
+            It means two threads can't call the methods of                 It means two threads can call the methods of StringBuilder simultaneously.
+            simultaneously.    
+                 
+                 
+                 
+                 
+   28.  What is exception handling and how do you achieve it?
+              Exception handling is a problem that occurs during the execution of the program. It disrupts the normal 
+              flow of the program and the application terminates abnormally, which is not recommended so these exceptions
+              are to be handled. It is achieved through try, catch and finally blocks.
+              The code which can get exception is written in try block and if exception happens we catch it with catch block
+              finally block contains statements which need to be executed if u handled exception or not.
+              
+   29.  What are checked vs unchecked exceptions?
+              Checked exceptions are exceptions that occur at the compile time. The extend only the throwable class.
+                  Example: File not found exception.
+              Unchecked exceptions are exceptions that occur at the run time.
+                  For example: - array out of bounds exception.
+              
+   30.   How does exception propagation works?
+               An exception is first thrown from the top of the stack and if it is not caught, it drops down the call stack
+               to the previous method, if not caught there, the exception again drops down to the previous method, and so on
+               until they are caught or until they reach the very bottom of the call stack. This is called exception propagation.
+               
+               
+   31.   Why strings are immutable in java?
+             As most of the data is represented in the form of Strings, developers of java taught about reuseability without
+             having to creating too many objects in memory. So string with same content point to same location in 
+             string constant pool. If strings are mutable if we change content of one string it may effect other string
+             properties pointing to that content, so strings are made immutable.    
+             
+             
+  32.  How many ways u can create Strings?
+           Strings can be created in 2 ways 
+              1. using string literal ex: String s = "Text";
+              2. using new keyword ex : String s = new String();
+           When we create strings using string literal jvm first calls the intern() method to checks in string constant pool
+           if the content is there, if it is there then it will return the address of that location , else it will create
+           new object in string constant pool and returns that address.
+           When we create Strings using new keyword first it creates object in the heap and checks for content in string
+           constant pool, and object reference of the heap is returned.
+           
+  33.                             
+                                    

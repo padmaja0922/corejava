@@ -1,0 +1,493 @@
+    1.  What is java?
+        Java is a  secured, robust, multithreaded, object oriented programming language used to develop
+        java program.
+    
+    2.  What are the components used to develop java application?
+        There are 5 components used to develop java application
+           1. JDK
+           2. IDE
+           3. DB
+           4. SVN
+           5. APP/WEB SERVER
+           
+           JDK: used to develop java program
+           IDE: sw application used to develop and debug java program - Eclipse , NetBeans, IntelJ
+           DB: used to store data - MySql,Oracle
+           SVN: environment used to store history of application - Svn, Git, Cvs
+           SERVER: used to deploy the java web application.
+           
+     3.  What are the types applications can be created using java programming ?
+           There are mainly 4 type of applications that can be created using java programming:
+            1) Stand alone Application : It is also known as desktop application or window-based application. 
+               An application that we need to install on every machine such as media player, antivirus etc.
+               AWT and Swing are used in java for creating stand alone applications.
+            2) Web Application : An application that runs on the server side and creates dynamic page,
+               is called web application. Currently, servlet, jsp, struts, jsf etc. technologies are used for 
+               creating web applications in java.
+            3) Enterprise Application : An application that is distributed in nature, such as banking applications etc.
+               It has the advantage of high level security, load balancing and clustering. In java, EJB is used for creating
+               enterprise applications.
+            4) Mobile Application : An application that is created for mobile devices. Currently Android and Java ME 
+               are used for creating mobile applications.   
+               
+     4.   JVM memory model?
+          JVM is an abstract machine. It's a specification which provides runtime environment in which java byte
+          code is executed.
+          Memory area alloted by JVM are:
+            1. Class Area
+            2. Heap Area
+            3. Stack Area
+            4. PC register
+            5. Native Method Stack
+            
+            Class Area : is used to hold static data members.
+            Heap Area: all the objects created during the program execution gets memory in heap.
+                       The context of String are stored in special memory location called String Constant pool.
+            Stack Area : stores frames, primitive local variables, partial results and plays part in method invocation
+                         and returns.
+            PC register: It contains the address of the Java virtual machine instruction currently being executed.
+            Native Method Stack : It contains all the native methods used in the application.             
+                                    
+            
+     5. Naming Conventions of java?
+         class name:	should start with upper case letter and be a noun e.g. String, Color, Button, Thread etc.
+         interface name	should start with upper case letter and be an adjective e.g. Runnable, Remote, ActionListener etc.
+         method name	should start with lower case letter and be a verb e.g. actionPerformed(), main(), print(), println() etc.
+         variable name	should start with lower case letter e.g. firstName, orderNumber etc.
+         package name	should be in lower case letter e.g. java, lang, sql, util etc.
+         constants name	should be in upper case letter. e.g. RED, YELLOW, MAX_PRIORITY etc.
+         
+         
+      6. Difference Between Heap and Stack?
+      
+         1.  When an object is created it always stored      1. Stack contains references to that object and local
+               in heap                                             primitives data members
+         2.  Heap memory is used by all parts of the         2. Stack is used by only one thread of execution.   
+              application.      
+         3.  Memory management in heap is done by            3. Memory management in stack is done in LIFO. 
+              Garbage Collector.
+         4.  Heap lives from start till the end of the       4. Stack is short lived. 
+              application.
+         5.  If heap is full java runtime throws             5. If stack is full java runtime throws
+                java.lang.OutOfMemeory error.                      java.lang.StackOverFlow error.
+         6.  We can use -Xms and -Xmx jvm option to          6. -Xss is used for stack.
+                define the start and max size of heap 
+     
+     7. What is Class in java ?
+          
+           Class is template or blue print that represents state and behavior. In java state is represented as data 
+           members and behavior is represented as methods.
+           
+     8. What is path and classpath?        
+                        
+            Path: Path is an environment variable which is used by the operating system to find the executables.
+                  Path is nothing but setting up an environment for operating system. Operating System will look
+                   in this PATH for executables.   Executables: javac.exe, java.exe, javadoc.exe, 
+                   
+            ClassPath: The CLASSPATH variable is one way to tell applications, including the JDK tools, 
+                      where to look for user classes.Classpath is an environment variable which is used by the Java 
+                      compiler to find the path of .classes.ie in J2EE we give the path of jar files. 
+                      Classpath is nothing but setting up the environment for Java. Java will use to find compiled classes 
+                      
+     9. Explain the  design in Java program?
+            In java we design program using
+              PackageName :(domain Name.companyName.projectName.functionality).
+              Import: to import java util and lang class and other classes used in the applications.
+              Class Declaration: (Access Modifier  class  ClassName).
+              Properties : (Access Modifier   dataTypes   variableName).
+              Method Declaration : (Access Modifier  returnType methodName()).
+              Comments 
+              
+    10. What are different OOPS concepts?
+o            Abstraction - is a concept to hide implementation details by showing only essential features.
+o            Polymorphism -  Polymorphism is the concept of an object’s ability to take on many forms.
+o            Encapsulation - is a concept where restricting access of data members to class by making them private and providing 
+                                 access outside class through getters and setters.
+o            Inheritance -  is a concept where a sub class acquires properties and behaviour of  super class , then 
+                                the classes are in IS-A relationship.
+                                
+                                
+    11.  What is static in java ?
+              Static is a keyword in java which can be applied towards 
+                  variables , methods and blocks.
+              when applied towards variables , they become class level variables. They gets memory in class area.
+              when applied towards methods they can be accessed without creating object of that class.
+              when applied towards blocks they are executed before constructors.
+             
+    12.  What is final in java?
+               Final is a keyword in java which can be applied towards
+                     variables, methods and classes
+               when applied towards variables the values of it can't be changed.
+               when applied towards methods they can't be overridden.
+               when applied towards classes they can't be inherited.
+               
+    13.  What is Abstraction?
+              Abstraction is one of the OOPs concept, it is the process of hiding implementation details and showing 
+              only functionality. Abstraction deals with what object does rather than how it does. 
+              At the time of designing the class Abstraction comes into picture for further flexibility 
+              if the developer is not sure of the implementation details of the method. In java method is declared with
+			  abstract keyword when there is no implementation of that method then class with abstract method becomes
+			  abstract. Extend keyword is used to extend the abstract class and the class
+              that implements the abstract class must implement the abstract methods.  It cannot be instantiated . 
+             
+    14.  What is Inheritance ?
+              Inheritance is one of the OOPs concept , where a sub class acquires the properties and behavior of super class.
+              Inheritance represents the IS-A relationship, also known as parent-child relationship. In java Extends keyword 
+              is used to  create sub class from super class.
+              We use Inheritance in java for
+                   For Method Overriding (so runtime polymorphism can be achieved).
+                   For Code Reusability.
+                   
+    15.  What is Polymorphism?
+              Polymorphism is one of the OOPs concept  by which we can perform a single action by different ways. 
+              There are two types of polymorphism in java: compile time polymorphism and runtime polymorphism. 
+              We can perform polymorphism in java by method overloading (compile time polymorphism)
+               and method overriding (runtime polymorphism). 
+               
+    16.  What is Encapsulation ?
+                Encapsulation is one of the OOPs concept where we can restrict the access of data members by making them
+                private and providing access outside the class by setters and getters.
+                By providing only setter or getter method, you can make the class read-only or write-only.
+                
+    17.  What is method overloading and overriding?
+                Overloading: If a class has multiple methods having same name but different in number of parameters or
+                datatypes of parameters  it is known as  Method Overloading. If we have to perform only one operation,
+                having same name of the methods increases the  readability of the program. 
+                
+                Overriding: In an Inheritance relationship if a subclass has the same method implementation which is 
+                already declared in super class  it is known as method overriding in java. Methods signature must be same in 
+                two classes. Method overriding is used achieve runtime polymorphism. 
+               
+    18. What are different types of variables in Java?
+            They are mainly 3 types of variables are declared in java
+                1. Instance Variable : Variables declared in class but outside the method. By creating object of class we
+                                       can access these variables.
+                2. Static Variables : Instance variables declared with static keyword are called static variables. These
+                                      variables are class level variables. They get memory in class area of jvm.
+                3. Local Variables : Variables which are declared inside the method are known as local variables.
+                                      The scope of these variables is within the method.
+                                      
+    20. What is static and dynamic binding ?
+             Connecting a method call to the method body is known as binding.
+               There are two types of binding
+                    1. static binding (also known as early binding).
+                    2. dynamic binding (also known as late binding).  
+               Static Binding: When type of the object is determined at compiled time(by the compiler), it is known as 
+               static binding. If there is any private, final or static method in a class, there is static binding.                                                                                                       
+               Dynamic Binding : When type of the object is determined at run-time, it is known as dynamic binding. 
+               
+     21.  What is an Interface ?.
+               An interface in java is a blueprint of a class. It has static constants and abstract method. It is used to
+               achieve abstraction and multiple inheritance in Java. Java Interface also represents IS-A relationship.
+               It cannot be instantiated just like abstract class.  Interface represents a contract where class that implements
+               the interface  has to  implement all the methods declared in the Interface. From java 1.8 we can have static
+               and default methods in Interface.              
+                                         
+                
+     22.   What are different types of access modifiers?
+	            Public: Accessible everywhere.
+	            Private: Accessible within the class.
+	            Protected: Accessible within the package and outside the package only through inheritance.
+	            Default: Accessible only within the package.
+              
+     23.   What is call by value?
+                While passing the primitive type variables the value is copied to the parameters that are defined in the method 
+				signatuere. That is why changes made to the variable within the method had no effect on the variable that was passed. 
+				When objects are passed, the value of the reference variable is passed.  
+
+     24.   What is string pool?
+	            String pool is a pool of strings stored in java heap memory.  String is possible only because of the 
+	            immutability concept of the string. String pools help in saving lot of space for java Runtime. When we create string
+	            using literal, it first looks for String with same value in the String pool, if found it just returns the reference else
+				it creates a new String in the pool and then returns the reference.
+	      
+	             
+    25.  Why string is immutable?
+	            Majority of the data is represented in the form of strings. As a result, there are high chances of strings
+	            pointing to the same reference. If a string changes, it will affect the other string which is being referenced 
+	            to the same pointer and there are chances that it might become unreferenced which gets deleted by the automatic
+	            garbage collector. This is the reason why strings are made immutable.
+   
+   26.  How do you make a class immutable?
+                By declaring a class final.
+                By declaring the properties of the class as final.
+                By not providing the setters.
+                
+                
+   27.  Difference between StringBuffer vs StringBuilder ?
+   
+            	StringBuffer	                                                     StringBuilder
+            StringBuffer is synchronized i.e. thread safe.           StringBuilder is non-synchronized i.e. not thread safe. 
+            It means two threads can't call the methods of         It means two threads can call the methods of StringBuilder simultaneously.
+            simultaneously.    
+        
+                 
+   28.  What is exception handling and how do you achieve it?
+              Exception handling is a problem that occurs during the execution of the program. It disrupts the normal 
+              flow of the program and the application terminates abnormally, which is not recommended so these exceptions
+              are to be handled. It is achieved through try, catch and finally blocks.
+              The code which can get exception is written in try block and if exception happens we catch it with catch block
+              finally block contains statements which need to be executed if u handled exception or not.
+              
+   29.  What are checked vs unchecked exceptions?
+              Checked exceptions are exceptions that occur at the compile time. The extend only the throwable class.
+                  Example: File not found exception.
+              Unchecked exceptions are exceptions that occur at the run time.
+                  For example: - array out of bounds exception.
+              
+   30.   How does exception propagation works?
+               An exception is first thrown from the top of the stack and if it is not caught, it drops down the call stack
+               to the previous method, if not caught there, the exception again drops down to the previous method, and so on
+               until they are caught or until they reach the very bottom of the call stack. This is called exception propagation.
+               
+               
+   31.   Why strings are immutable in java?
+             As most of the data is represented in the form of Strings, developers of java taught about reuseability without
+             having to creating too many objects in memory. So string with same content point to same location in 
+             string constant pool. If strings are mutable if we change content of one string it may effect other string
+             properties pointing to that content, so strings are made immutable.    
+             
+             
+  32.  How many ways u can create Strings?
+           Strings can be created in 2 ways 
+              1. using string literal ex: String s = "Text";
+              2. using new keyword ex : String s = new String();
+           When we create strings using string literal jvm first calls the intern() method to checks in string constant pool
+           if the content is there, if it is there then it will return the address of that location , else it will create
+           new object in string constant pool and returns that address.
+           When we create Strings using new keyword first it creates object in the heap and checks for content in string
+           constant pool, and object reference of the heap is returned.
+           
+           
+  33.  JAVA Collection framework tree ?  
+  
+  34.  ArrayList vs LinkedList?
+           1. ArrayList and LinkedList both implements List interface.
+           2. ArrayList class uses a dynamic array for storing the elements. Java LinkedList class uses node based doubly linked
+                 list to store the elements.
+           3. ArrayList allows random access because array works at the index basis. Accessing in LinkedList is slow because
+                 it has to check each and every node until it finds the required element.
+           4. ArrayList manipulation is hard because lot of shifting needs to be done .LinkedList manipulation is fast
+                 because no shifting needed.
+            
+  35.  List vs Set?
+          List and Set are the interfaces in Collection.
+            1. List and all of it's implementation classes maintains the insertion order. Set doesn’t maintain any order
+            2. List allows duplicate elements. Set doesn't allow duplicate elements.
+            3. List allows any number of null values. Set allows only one null value.   
+            
+  36.  Which one you prefer between ArrayList vs LinkedList ?
+            If the functionality of your application requires  more insertion and deletion operations then use LinkedList
+            else use ArrayList.
+            
+  37.  How do you sort collection of elements in JAVA ?
+            Comparable and Comparator are interfaces used to sort collections.
+            If you want to sort collections only on one property through out your functionality we can implement Comparable 
+            Interface and implement its method compareTo. compareTo method takes one object as input and compares with this
+            object of the class.
+            If in your functionality requires  sorting on more than one property we implement Comparator Interface.
+            It has compare method which takes 2 objects and compares them.
+            
+  38.   What is Collections class in JAVA ?
+            Collections class contains static methods which we can use on collections. like sort, min, max etc.
+            
+  39.  HashTable vs HashMap ?
+            1. HashMap and HashTable both implements Map interface, and holds values based on keys.
+            2. HashMap is non synchronized. HashTable is synchronized.
+            3. HashMap allows one null key and multiple null values. HashTable doesn't allow any null key or values.
+                                                       
+  40.  What is HashMap ? 
+            In java HashMap is an unordered map which implements map interface and holds values based on keys. 
+            It contains only unique elements. It can hold one null key and any number of null values.
+            
+  41.  How does HashMap Works?
+            HashMap works on hashing techniques. It stores values based on keys. Each key-value pair is stored in an object 
+            of Entry<K, V>class. The values of keys are stored in doubly LinkedList known as buckets.
+            
+            When  put() method is called:
+               1. First checks whether the key is null or not. If the key is null, it calls putForNullKey() method. 
+                  table[0] is always reserved for null key. Because, hash code of null is 0.
+               2. If the key is not null, then it calculates the hash code of the key by calling hash() method.
+               3. Then value of entry table is calculated. After calculating index it checks whether there is any bucket
+                  present at that location if yes it runs equals method on keys. If equals method returns true then it replaces
+                  value of that key. If false that is the case of HashMap collision in that case new bucket is created and added
+                  to the existing bucket.
+                   
+            When  get() method is called :
+                1. First checks whether specified key is null or not. If the key is null, it calls getForNullKey() method.
+                2. If the key is not null, hash code of the specified key is calculated.
+                3. Then index of entry table is calculated, after getting index it calls for equals method on key if its
+                   true it returns the value.
+                   
+    42.  What is HashMap collision ?
+             There are chances that the hashFunction returns same index for 2 different keys.  This is what we call a collision.
+                              
+             
+    43.   What is ConcurrentHashMap ?
+              
+    44.   Why do you think Strings makes appropriate keys for HashMap ?
+               As String are immutable having strings as keys there is a chance of getting same hash code each and everytime u run
+               hash code function on strings so strings are prefered for keys.               
+                           
+    45.  What kind of classes are good for HashMap keys ?
+               Immutable classes.
+               
+    46.  What is Iterator vs ListIterator ?
+              1. Iterator is used for traversing List and Set both. We can use ListIterator to traverse List only.
+              2. We can traverse in only forward direction using Iterator.Using ListIterator, we can traverse a List
+                 in both the directions (forward and Backward).                                       
+              3. We cannot obtain indexes while using Iterator. We can obtain indexes at any point of time while traversing
+                 a list using ListIterator.   
+              4. We cannot add element to collection while traversing it using Iterator, it throws ConcurrentModificationException 
+                 when you try to do it. We can add element at any point of time while traversing a list using ListIterator.
+              
+    47.  Comparable vs Comparator interfaces ?
+              Comparable and Comparator are used for sorting collections. 
+              1. Comparable provides single sorting sequence. In other words, we can sort the collection on the basis of single element 
+                   such as id or name or price etc.
+                 Comparator provides multiple sorting sequence. In other words, we can sort the collection on the basis of multiple 
+                   elements such as id, name and price etc.  
+              2. Comparable provides compareTo() method to sort elements. Comparator provides compare() method to sort elements.     
+              3. Comparable is found in java.lang package. Comparator is found in java.util package.
+              4. In Comparable Collections.sort(List) method is used to sort list elements .In Comparator Collections.sort(List,Comparator) method
+                   is used for sorting.
+                   
+    48.  TreeSet and TreeMap ?
+              1. TreeSet implements Set interface and TreeMap implements Map interface.           
+              2. TreeSet holds only one object where as TreeMap holds Key value pair. 
+              3. TreeSet cann't have duplicate values but TreeMap can have duplicate values but unique keys.
+              
+    49.  What is contract between hash code and equals ?
+               If two objects have same hash code then the equals method may or may not return true.
+               If two objects are true for equals method then hash code for those objects must be same.
+               If you overwrite one method you must overwrite another one.   
+               
+    50.  Why do you need override HashCode and equals?    
+               
+    51.  What is Exception Handling  and How do you achieve it ?
+               Exception is a problem that occurs during the execution of the program. It disrupts the normal flow of the
+               program and the application terminates abnormally, which is not recommended so these exceptions are to be
+               handled. It is achieved through try, catch and throw blocks.  
+               
+    52.  How do you make sure a code must be executed even if exception happens ?
+               By Keeping that part of code in finally block.               
+               
+    53.  What code you normally write in finally block ?
+              Statements like closing connections are written in finally block. It should  always be followed by 
+              try or catch block. The finally block gets executed even the exception is handled or not.  
+              
+    54.  What are checked vs unchecked exceptions ?
+              Checked exceptions are exceptions that occur at the compile time. The extend only the throwable class. 
+                 Example: File not found exception.
+              Unchecked exceptions are exceptions that occur at the run time. 
+                 For example: array out of bounds exception, null pointer exceptions.
+                                                    
+    55.  How do you create custom Exception ?
+               Using the throw keyword, we can explicitly throw exceptions either checked or unchecked exceptions.
+               It is mainly used to throw custom exceptions.  
+               
+    56.  How does exception propagation works ?
+               An exception is first thrown from the top of the stack and if it is not caught, it drops down the call
+               stack to the previous method, if not caught there, the exception again drops down to the previous method, 
+               and so on until they are caught or until they reach the very bottom of the call stack. This is called 
+               exception propagation.                                                         
+                                                    
+    57.  throw vs thorws ?
+              1. Throw keyword is used inside the method to explicitly throw an exception, Throws keyword is used to
+     			  declare an exception in method header.
+              2. We can throw single exception using throw keyword. We can declare multiple exceptions using throws keyword.
+              3. Checked exception cannot be propagated using throw only. Checked exception can be propagated with throws.
+              4. Throw is follwed by instance. Throws is followed by class.	
+  
+    58. Exception vs Error ?
+              1. Errors in java are of type java.lang.Error. Exceptions in java are of type java.lang.Exception.     
+              2. All errors in java are unchecked type.	Exceptions include both checked as well as unchecked type.
+              3. Errors happen at run time. They will not be known to compiler. Checked exceptions are known to compiler
+       			  where as unchecked exceptions are not known to compiler because they occur at run time.	
+			  4. It is impossible to recover from errors. You can recover from exceptions by handling them through try-catch blocks.	
+              5. Errors are mostly caused by the environment in which application is running.	Exceptions are mainly caused
+       			  by the application itself.			  
+              6. Examples :
+                    java.lang.StackOverflowError, java.lang.OutOfMemoryError
+
+                 Examples :
+                    Checked Exceptions : SQLException, IOException
+                    Unchecked Exceptions : ArrayIndexOutOfBoundException, ClassCastException, NullPointerException
+					
+	59. What are anonymous classes?
+              Anonymous classes enable you to make your code more concise. They enable you to declare and instantiate a class at the same time.
+			  They are like local classes except that they do not have a name. Use them if you need to use a local class only once.
+				
+	60.  Why do you need overridge Hashcode and equals?
+	
+	61.  What is multi threading ? 
+	          Multithreading is a process of executing multiple threads simultaneously.
+			  Its main advantage is:
+              	  Threads share the same address space.
+                  Thread is lightweight.
+                  Cost of communication between threads is low. 
+				  
+	62.  How do you create Threads ?
+              There are two ways to create a thread:
+                   1. By extending Thread class
+                   2. By implementing Runnable interface.
+			  and overriding run() method.
+ 
+    63.  How do you synchronize your code ?
+              Synchronization in java is the capability to control the access of multiple threads to any shared resource.
+                There are two types of thread synchronization
+                    1. Mutual Exclusive
+                           1. Synchronized method.
+                           2. Synchronized block.
+                           3. Static synchronization.
+                    2. Cooperation (Inter-thread communication in java)
+					
+	64.  What is volatile ?
+	         The Java volatile keyword is used to mark a Java variable as "being stored in main memory". More precisely that means, that 
+	         every read of a volatile variable will be read from the computer's main memory, and not from the CPU cache, and that every write 
+	         to a volatile variable will be written to main memory, and not just to the CPU cache.
+	
+	65.  What is race condition ?
+	          A race condition occurs when two or more threads can access shared data and they try to change it at the same time. Because the
+    		  thread scheduling algorithm can swap between threads at any time, you don't know the order in which the threads will attempt to 
+			  access the shared data. Therefore, the result of the change in data is dependent on the thread scheduling algorithm, i.e. both 
+			  threads are "racing" to access/change the data.
+			  
+	67.   What is dead lock ?	
+              Deadlock in java is a part of multithreading. Deadlock can occur in a situation when a thread is waiting for an object lock,
+			  that is acquired by another thread and second thread is waiting for an object lock that is acquired by first thread. Since, both
+			  threads are waiting for each other to release the lock, the condition is called deadlock.	
+			  
+	68.   What is ThreadLocal ?		  
+               ThreadLocal in Java is a different way to achieve thread-safety, it doesn't address synchronization requirement, instead it 
+               eliminates sharing by providing explicitly copy of Object to each thread. Since Object is no more shared there is no requirement
+               of Synchronization which can improve scalability and performance of application.
+               ThreadLocal instances are typically private static fields in classes that wish to associate state with a thread.
+    	
+	69. What is ThreadPool ?
+	           A thread pool is a group of threads initially created that waits for jobs and executes them. The idea is to have the threads
+			   always existing, so that we won't have to pay overhead time for creating them every time. A group of fixed size threads are 
+			   created. A thread from the thread pool is pulled out and assigned a job by the service provider. After completion of the job,
+			   thread is contained in the thread pool again.
+			   
+	70. Synchronized methods vs Synchronized blocks ?
+               The key difference is this: if you declare a method to be synchronized, then the entire body of the method becomes synchronized;
+			   if you use the synchronized block, however, then you can surround just the "critical section" of the method in the synchronized
+			   block, while leaving the rest of the method out of the block.
+               If the entire method is part of the critical section, then there effectively is no difference. If that is not the case, then 
+			   you should use a synchronized block around just the critical section. The more statements you have in a synchronized block,
+			   the less overall parallelism you get, so you want to keep those to the minimum.
+			   
+	71. How do you use Executor framework ?
+	           
+	
+    72.  What is starvation ?
+    73.  What is serialization and externalization ?
+    74.  How do you avoid a variable particiapting in serialization ?		
+    75.  What is enum in java?
+              An enum type is a special data type that enables for a variable to be a set of predefined constants. The variable must be equal
+			  to one of the values that have been predefined for it. Common examples include compass directions (values of NORTH, SOUTH, EAST, 
+			  and WEST) and the days of the week. Because they are constants, the names of an enum type's fields are in uppercase letters.
+ 	
+	
+                                     

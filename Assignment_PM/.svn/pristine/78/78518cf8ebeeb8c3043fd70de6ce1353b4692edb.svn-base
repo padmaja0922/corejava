@@ -1,0 +1,58 @@
+/**
+ * 
+ */
+package com.bcj.corejava.maps;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.TreeMap;
+
+/**
+ * @author Boot Camp User 008
+ *
+ */
+public class Rarest {
+
+	public static void main(String[] args) {
+
+		HashMap<String, Integer> rearMap = new HashMap<String, Integer>();
+		rearMap.put("Alyssa", 22);
+		rearMap.put("Char", 25);
+		rearMap.put("Dan", 25);
+		rearMap.put("Jeff", 20);
+		rearMap.put("Kasey", 20);
+		rearMap.put("Kim", 20);
+		rearMap.put("Mogran", 25);
+		rearMap.put("Ryan", 25);
+		rearMap.put("Stef", 22);
+		getRarestAge(rearMap);
+
+	}
+
+	/**
+	 * @param rearMap
+	 */
+	private static void getRarestAge(HashMap<String, Integer> rearMap) {
+		
+			      
+		Map<Integer,Integer> countMap = new TreeMap<Integer,Integer>();		
+		 
+		for(Map.Entry<String, Integer> entry : rearMap.entrySet()){
+			   
+			  Integer value = entry.getValue();
+			  System.out.println();
+			   Integer count = countMap.get(value);
+			   if (count == null)
+			      countMap.put(value, new Integer(1));
+			   else
+			      countMap.put(value, new Integer(count+1));			
+			
+		}
+		
+		for(Map.Entry<Integer,Integer> entry : countMap.entrySet())
+			System.out.println(entry.getKey());
+					/*"  "+ entry.getValue());*/
+
+	}
+
+}

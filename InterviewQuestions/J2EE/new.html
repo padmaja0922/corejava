@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="register.css" />
+
+
+</head>
+<body>
+
+	<div class="header">
+
+		<h1>Registration</h1>
+
+		<form action="RegistrationServlet" method="post">
+
+			<!-- Form inputs for Customer -->
+
+			<div id="comapny1">
+
+				<h4>Personal Info :</h4>
+				<div class="company">
+
+					First Name : <input type="text" name="firstName" required><br>
+					Last Name : <input type="text" name=" lastName " required><br>
+					Email : <input type="text" name="emailId" required><br>
+					Phone : <input type="text" name="phoneNo" required><br>
+					DOB : <input type="text" name="dob" required><br>
+					Social Security No : <input type="password" name="ssn" required>
+					<br> Annual Income : <input type="text" name="annualIncome"
+						required>
+
+
+					<!--  Form inputs for Address for Customer -->
+					<h4>Address :</h4>
+					<div class="address">
+
+
+						Address Line1 : <input type="text" name="AddressLine1" required><br>
+						Address Line2 : <input type="text" name="AddressLine2"><br>
+						City : <input type="text" name="City" required> <br>
+						State : <input type="text" name="State" required> <br>
+						ZipCode : <input type="text" name="ZipCode" required> <br> <br>
+						
+						Submit : <input type = "button" placeholder = "submit">
+					</div>
+				</div>
+				</div>
+		</form>
+
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,1 @@
+2017-04-19 13:53:12,402 (HH:mm:ss) ERROR[http-nio-8080-exec-7] -com.bcj.psbregent.tenantportal.dao.RegistrationDaoError while getting connection to databasenull - Error while getting connection to databasenull

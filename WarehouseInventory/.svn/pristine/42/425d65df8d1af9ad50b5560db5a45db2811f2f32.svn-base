@@ -1,0 +1,60 @@
+/**
+ * 
+ */
+package com.bcj.manageInventory;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+/**
+ * @author Boot Camp User 008
+ *
+ */
+public class Test {
+
+	public static void main(String[] args) {
+
+		Map<String, FoodItem> food = new HashMap<String, FoodItem>();
+		Map<String, Inventory> inv = new HashMap<String, Inventory>();
+
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the name of the file : ");
+		String fileName = scan.next();
+
+		BufferedReader inputFile;
+
+		try {
+			inputFile = new BufferedReader(new FileReader(fileName));
+
+			String lineOfText = inputFile.readLine();
+
+			while (lineOfText != null) {
+
+				String[] str = lineOfText.split("-");
+				String[] item = str[1].split(":");
+				for (int i = 0; i < item.length; i++)
+					item[i] = item[i].trim();
+				if ('F' == str[0].charAt(0)) {
+					FoodItem fItem = new FoodItem();
+					fItem.setShelfLife(Integer.parseInt(item[3]));
+					fItem.setName(item[5]);
+					food.put(item[1], fItem);
+					System.out.println(food);
+				} else{
+					inv.put(item[0], null);
+				System.out.println(inv);
+				}
+				lineOfText = inputFile.readLine();
+				if(lineOfText.equals("End"))
+					break;
+			}
+
+			scan.close();
+		} catch (IOException e) { e.printStackTrace(); 	}
+        
+	}
+}

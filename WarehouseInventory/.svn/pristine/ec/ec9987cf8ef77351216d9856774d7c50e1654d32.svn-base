@@ -1,0 +1,61 @@
+/**
+ * 
+ */
+package com.bcj.manageInventory;
+
+/**
+ * @author Boot Camp User 008
+ *
+ */
+public class FoodItem {
+	
+	private int shelfLife;
+	private String name;
+	
+	
+	public String toString(){
+		
+		return (this.shelfLife + "  "+ this.name);	}
+
+	
+	
+	public FoodItem() {
+		super();
+	}
+	
+	/**
+	 * @param shelfLife
+	 * @param name
+	 */
+	public FoodItem(int shelfLife, String name) {
+		super();
+		this.shelfLife = shelfLife;
+		this.name = name;
+	}
+	
+	/**
+	 * @return the shelfLife
+	 */
+	public int getShelfLife() {
+		return shelfLife;
+	}
+	/**
+	 * @param shelfLife the shelfLife to set
+	 */
+	public void setShelfLife(int shelfLife) {
+		this.shelfLife = shelfLife;
+	}
+	/**
+	 * @return the name
+	 */
+	public String getName() {
+		return name;
+	}
+	/**
+	 * @param name the name to set
+	 */
+	public void setName(String name) {
+		this.name = name;
+	}
+
+}

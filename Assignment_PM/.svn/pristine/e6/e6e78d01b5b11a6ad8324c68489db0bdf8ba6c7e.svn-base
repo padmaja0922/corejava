@@ -1,0 +1,21 @@
+package com.bcj.corejava.operators.lab1;
+
+/* Calculating investment after 3 years */
+
+public class InvestmentValue {
+	
+	public static void main(String args[]){
+		
+		double inv = 14000, percent;
+		
+		percent = inv * (0.4);
+		inv = inv + percent;
+		inv = inv - 1500;
+		percent = inv *(0.12);
+		inv = inv + percent;
+		System.out.println("Total investment after 3 years : "+ inv);
+		
+		
+	}
+
+}

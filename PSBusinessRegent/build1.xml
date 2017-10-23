@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<project name="PSBusinessRegent" basedir="." default="war">
+
+
+	<path id="compile.classpath">
+		<fileset dir="WebContent/WEB_INF/lib">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+	
+	<target name="init">
+		<mkdir dir="build/classes" />
+	</target>
+
+	<target name="clean">
+		<delete dir="build/classes" />
+	</target>
+
+	<target depends="clean" name="cleanall" />
+
+
+	<target depends="init" name="compile">
+		<javac destdir="build/classes" debug="true" srcdir="src">
+			<classpath refid="compile.classpath">
+			</classpath>
+		</javac>
+	</target>
+
+
+	<target name="war" depends="compile">
+		<war destfile="C:\bcj-dec16\devtools\Apache Software Foundation\Tomcat 8.0\webapps\psb.war" webxml="WebContent/WEB-INF/web.xml">
+			<fileset dir="WebContent" />
+			<lib dir="WebContent/WEB-INF/lib" />
+			<classes dir="build/classes" />
+
+		<fileset dir="${basedir}">
+				<include name="resirce\CerditCardInfo.txt" />
+				<include name="resource\db.properties" />
+
+			</fileset> 
+			
+			
+		</war>
+	</target>
+
+
+
+</project>

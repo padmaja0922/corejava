@@ -1,0 +1,55 @@
+/**
+ * This class validates whether given email id is of length 3-20 and in the pattern Adf23_234@fdsf.com
+ */
+package com.bcj.corejava.datatypes.strings.lab3;
+
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+/**
+ * @author Boot Camp User 008
+ *
+ */
+public class EmailValidation {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		String email;
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter your Email Id");
+		email = scan.nextLine();
+		validateEmailId(email);
+		scan.close();
+		
+	}
+	
+	/** this method checks for email size and pattern takes string as argument */
+	public static void validateEmailId(String email){	
+		String regex = "^[A-Z]{1}";
+		String patternEmail = "^[(\\w-\\_)]+@[(a-z-A-z)]+\\.[(a-z-A-z)]{2,3}+\\.([(a-z-A-z)]{2})*";
+		
+		
+		Pattern pattern = Pattern.compile(regex);		
+	  Matcher matcher = pattern.matcher(email.substring(0,1));
+	  Pattern pattern1 = Pattern.compile(patternEmail);		
+	  Matcher matcher1 = pattern1.matcher(email);
+	  	  
+	  if(email.length()<3 || email.length()> 20)
+			System.out.println("Invalid Email length ");
+	  else if(matcher.find()== false)
+		  System.out.println("Email Should start with capital letter");
+	  
+		else if(matcher1.find()==false)
+			System.out.println("Invalid Combination for username");
+		else
+			System.out.println("Email Id is valid");
+			
+		
+		
+	}
+
+}
